@@ -45,6 +45,5 @@ const cityController = {
             res.json( `Se produjo un error al eliminar la ciudad: ${error}` )
         }
     }
-
 }
 module.exports = cityController
