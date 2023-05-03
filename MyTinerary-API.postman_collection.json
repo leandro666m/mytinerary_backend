@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "75973d23-ee03-4f62-b380-85a3584664c9",
+		"name": "MyTinerary-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21889405"
+	},
+	"item": [
+		{
+			"name": "postCities   =   localhost:3000/api/cities",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n\"name\": \"ER\",\r\n\"country\": \"Argentina\",\r\n\"description\": \"ER\",\r\n\"imageURL\": \"htttp:\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/cities",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeCity  =  localhost:3000/api/cities/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/cities/644b2a5e3f399115c1eebbde",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cities",
+						"644b2a5e3f399115c1eebbde"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCities   =   localhost:3000/api/cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/cities/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOneCity   =   localhost:3000/api/cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/cities/64511d3e541c348503b8482d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cities",
+						"64511d3e541c348503b8482d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifyCity  =  localhost:3000/api/cities/644b388e15d7d95a249deeda",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n\"name\": \"BsAS\",\r\n\"country\": \"Argentina\",\r\n\"description\": \"BA Ciudad\",\r\n\"imageURL\": \"htttp:\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/cities/644b388e15d7d95a249deeda",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cities",
+						"644b388e15d7d95a249deeda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postHotels = localhost:3000/api/hotels",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"name\": \"String\",\r\n        \"country\": \"String\",\r\n        \"description\": \"String\",\r\n        \"imageURL\": \"String\",\r\n        \"cityid\": \"64512167d07670af6d21c495\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/hotels",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hotels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getHotels = localhost:3000/api/hotels/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/hotels/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hotels",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOneHotel  = localhost:3000/api/hotels/64516cc47bcf403efe5f4cd9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/hotels/64516cc47bcf403efe5f4cd9",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hotels",
+						"64516cc47bcf403efe5f4cd9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
