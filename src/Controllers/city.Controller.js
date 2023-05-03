@@ -1,4 +1,3 @@
-const City = require('../Models/City')
 const cityService = require('../Services/cityServices')
 
 /* Controlador Create Read Update Delete para Ciudades */

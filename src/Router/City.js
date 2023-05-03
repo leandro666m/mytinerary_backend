@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router()
 
 const cityController = require('../Controllers/city.Controller')
+const hotelController = require('../Controllers/hotel.Controller')
 
 /* CRUD */
         /* servlet */
@@ -14,6 +15,12 @@ router.put("/cities/:id", cityController.modifyCity  )
 router.get("/cities/:id" ,  cityController.getOneCity  )
 
 router.patch("/")
+
+/* hoteles */
+router.get("/hotels" ,  hotelController.getHotels  )
+router.post("/hotels" , hotelController.addHotel  )
+router.get("/hotels/:id" ,  hotelController.getOneHotel  )
+
 
 module.exports = router
 
