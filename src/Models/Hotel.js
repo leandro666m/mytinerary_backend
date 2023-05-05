@@ -6,10 +6,7 @@ const Hotel = new Schema(
         country: String,
         description: String,
         imageURL: String,
-        city: { 
-            type: Schema.Types.ObjectId,
-             ref: 'City'
-            }
+        city: { type: Schema.Types.ObjectId, ref: 'City'}
     }
 )
 

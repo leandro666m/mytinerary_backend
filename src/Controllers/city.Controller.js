@@ -29,9 +29,7 @@ const cityController = {
 
     modifyCity: async function(req, res){
         try {
-
             res.json( await  cityService.modifyCity(req.params.id, req.body.name, req.body.country, req.body.description, req.body.imageURL ) )
-        
         } catch (error) {
             res.json( `Se produjo un error al modificar los datos de la ciudad: ${error}` )
         }

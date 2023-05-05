@@ -21,7 +21,6 @@ let  cityService = {
              return city
     },
     modifyCity: async function( id, name , country, description,imageURL ){
-        
         let city = await City.findOneAndUpdate( 
                 { _id: id },
                 {
