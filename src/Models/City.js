@@ -10,7 +10,13 @@ const City = new Schema(
             { type: Schema.Types.ObjectId, 
                 ref: 'Hotel', 
                 autopopulate: true
-            } 
+            }
+        ],
+        itineraries: [ 
+            { type: Schema.Types.ObjectId, 
+                ref: 'Itinerary', 
+                autopopulate: true
+            }
         ]
     }
 );

@@ -11,6 +11,10 @@ let  hotelService = {
         let hotel = await Hotel.findOne({_id: id})
          return hotel
     },
+    getHotelsByCity: async function(id){
+        let city = await City.findOne( {_id: id} )
+         return city.hotels
+    },
     addHotel: async function(name , country, description,imageURL, cityid){
         let city= await City.findOne({_id: cityid })
         let hotel = await Hotel.create( 
@@ -24,6 +28,24 @@ let  hotelService = {
             // Agregar el ID del hotel al array "hotels" de la ciudad correspondiente
         city.hotels.push(hotel._id);
         await city.save();
+         return hotel
+    },
+    modifyHotel: async function( id, name , country, description,imageURL ){
+        
+        let hotel = await Hotel.findOneAndUpdate( 
+                { _id: id },
+                {
+                    name: name,
+                    country: country,
+                    description: description,
+                    imageURL: imageURL
+                } ,
+                { new: true}
+            )
+         return hotel
+    },
+    removeHotel: async function(id){
+        let hotel = await Hotel.findOneAndDelete({_id: id}) 
          return hotel
     }
 }

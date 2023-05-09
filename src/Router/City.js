@@ -4,6 +4,7 @@ const router = express.Router()
 
 const cityController = require('../Controllers/city.Controller')
 const hotelController = require('../Controllers/hotel.Controller')
+const itineraryController = require('../Controllers/itinerary.Controller')
 
 /* CRUD */
         /* servlet */
@@ -21,15 +22,10 @@ router.get("/hotels" ,  hotelController.getHotels  )
 router.post("/hotels" , hotelController.addHotel  )
 router.get("/hotels/:id" ,  hotelController.getOneHotel  )
 
+/* hoteles */
+router.get("/itineraries" ,  itineraryController.getItineraries  )
+router.post("/itineraries" , itineraryController.addItinerary  )
+router.get("/itineraries/:id" ,  itineraryController.getOneItinerary  )
+
 
 module.exports = router
-
-/* /cities
-get: getCities
-post: addCity
-
-/cities/:id
-delete: removeCity
-put: modifyCity
-get: getOneCity
- */
