@@ -15,7 +15,7 @@ let  itineraryService = {
         let city = await City.findOne( {_id: id} )
          return city.itineraries
     },
-    addItinerary: async function(nameItinerary , nameAutor, photoAutor,precio, duracion,hashtags, likes, cityid){
+    addItinerary: async function(nameItinerary , nameAutor, photoAutor,precio, duracion,hashtags, likes, description, cityid){
         let city= await City.findOne( {_id: cityid } )
         let itinerary = await Itinerary.create( 
             {
@@ -26,6 +26,7 @@ let  itineraryService = {
                 duracion: duracion,
                 hashtags: hashtags,
                 likes: likes,
+                description: description,
                 city: city._id
             }   );
 
@@ -33,7 +34,7 @@ let  itineraryService = {
         await city.save();
          return itinerary
     },
-    modifyItinerary: async function( id, nameItinerary , nameAutor, photoAutor,precio, duracion,hashtags, likes ){
+    modifyItinerary: async function( id, nameItinerary , nameAutor, photoAutor,precio, duracion,hashtags, likes, description ){
         let itinerary = await Itinerary.findOneAndUpdate( 
                 { _id: id },
                 {
@@ -44,6 +45,7 @@ let  itineraryService = {
                     duracion: duracion,
                     hashtags: hashtags,
                     likes: likes,
+                    description: description
                 } ,
                 { new: true}
             )

@@ -18,14 +18,14 @@ const itineraryController = {
     },
     addItinerary: async function (req, res) {
         try {
-            res.json(await itineraryService.addItinerary( req.body.nameItinerary , req.body.nameAutor, req.body.photoAutor, req.body.precio, req.body.duracion, req.body.hashtags, req.body.likes, req.body.cityid) )
+            res.json(await itineraryService.addItinerary( req.body.nameItinerary , req.body.nameAutor, req.body.photoAutor, req.body.precio, req.body.duracion, req.body.hashtags, req.body.likes, req.body.description, req.body.cityid) )
         } catch (error) {
             res.json(`Se produjo un error al guardar addItinerary (controller): ${error}`)
         }
     },
     modifyItinerary: async function(req, res){
         try {
-            res.json( await itineraryService.modifyItinerary(req.params.id, req.body.nameItinerary , req.body.nameAutor, req.body.photoAutor, req.body.precio, req.body.duracion, req.body.hashtags, req.body.likes, req.body.cityid) )
+            res.json( await itineraryService.modifyItinerary(req.params.id, req.body.nameItinerary , req.body.nameAutor, req.body.photoAutor, req.body.precio, req.body.duracion, req.body.hashtags, req.body.likes, req.body.description,req.body.cityid) )
         } catch (error) {
             res.json( `Se produjo un error al modificar los datos del itinerario (controller): ${error}` )
         }

@@ -9,6 +9,7 @@ const Itinerary = new Schema(
         duracion: Number,
         hashtags: Array,
         likes: Number,
+        description: String,
         city: { type: Schema.Types.ObjectId, ref: 'City'}
     }
 )
