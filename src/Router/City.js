@@ -21,11 +21,13 @@ router.patch("/")
 router.get("/hotels" ,  hotelController.getHotels  )
 router.post("/hotels" , hotelController.addHotel  )
 router.get("/hotels/:id" ,  hotelController.getOneHotel  )
+router.put("/hotels/:id", hotelController.modifyHotel  )
 
-/* hoteles */
+/* itinerarios */
 router.get("/itineraries" ,  itineraryController.getItineraries  )
 router.post("/itineraries" , itineraryController.addItinerary  )
 router.get("/itineraries/:id" ,  itineraryController.getOneItinerary  )
+router.put("/itineraries/:id" ,   itineraryController.modifyItinerary  )
 
 
 module.exports = router
